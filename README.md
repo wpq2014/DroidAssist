@@ -100,3 +100,7 @@ public class MainActivity extends Activity {
 1. 由于 Javassist 的机制，DroidAssist 在处理的过程中将会产生额外的局部变量用以指向参数变量和保存返回值，但处理后有一些局部变量并没有实际作用。
 2. DroidAssist 在处理某些代码时可能会新增一些额外的代理方法。
 3. DroidAssist 插件用于 `library model`  只能处理 Java 源码产生的 class，不能处理本地依赖中的 jar 。
+
+
+## 参考
+> [Android开发中的AOP技术](https://www.jianshu.com/p/c40528c8df17)

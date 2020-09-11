@@ -5,6 +5,7 @@ import com.didichuxing.tools.droidassist.transform.Transformer
 import com.didichuxing.tools.droidassist.transform.around.*
 import com.didichuxing.tools.droidassist.transform.enhance.*
 import com.didichuxing.tools.droidassist.transform.insert.*
+import com.didichuxing.tools.droidassist.transform.query.MethodCallQueryTransformer
 import com.didichuxing.tools.droidassist.transform.replace.*
 import org.gradle.api.Project
 
@@ -128,6 +129,13 @@ class DroidAssistConfiguration {
 
         configs.Global.Filter.Include.each { globalIncludes.add(it.text()) }
         configs.Global.Filter.Exclude.each { globalExcludes.add(it.text()) }
+
+        configs.Query.MethodCall.each {
+            node ->
+                sourceTargetTransformerNodeHandler(METHOD, node) {
+                    return new MethodCallQueryTransformer()
+                }
+        }
 
         configs.Replace.MethodCall.each {
             node ->

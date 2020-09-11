@@ -58,7 +58,7 @@ public class ConstructorCallReplaceTransformer extends ReplaceTransformer {
 
         String replacement = replaceInstrument(inputClassName, newExpr, target);
 
-        Logger.warning(getPrettyName() + "by: " + replacement
+        Logger.warning(getPrettyName() + " by: " + replacement
                 + " at " + inputClassName + ".java" + ":" + newExpr.getLineNumber());
         return true;
     }

@@ -1,4 +1,4 @@
-package com.didichuxing.tools.droidassist.transform.replace;
+package com.didichuxing.tools.droidassist.transform.query;
 
 import com.didichuxing.tools.droidassist.util.Logger;
 
@@ -8,13 +8,13 @@ import javassist.NotFoundException;
 import javassist.expr.MethodCall;
 
 /**
- * Transform that replaces method-call with new code.
+ * Transform that inserts custom code at the pointcut where method is called.
  */
-public class MethodCallReplaceTransformer extends ReplaceTransformer {
+public class MethodCallQueryTransformer extends QueryTransformer {
 
     @Override
     public String getName() {
-        return "MethodCallReplaceTransformer";
+        return "MethodCallInsertTransformer";
     }
 
     @Override
@@ -45,15 +45,16 @@ public class MethodCallReplaceTransformer extends ReplaceTransformer {
         if (insnClass == null) {
             return false;
         }
-
         if (!isMatchSourceMethod(insnClass, insnName, insnSignature, false)) {
             return false;
         }
 
         String target = getTarget();
-        String replacement = replaceInstrument(inputClassName, methodCall, target);
-        Logger.warning(getPrettyName() + " by: " + replacement
-                + " at " + inputClassName + ".java" + ":" + methodCall.getLineNumber());
+        int line = methodCall.getLineNumber();
+
+        Logger.warning(target + insnClassName + "." + insnName
+                + "\n\t\t\t 代码定位：" + inputClassName + ".java" + ":" + line);
+
         return true;
     }
 }

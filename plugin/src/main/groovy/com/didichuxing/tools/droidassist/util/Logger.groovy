@@ -102,56 +102,56 @@ class Logger {
     }
 
     static void debug(String msg) {
-        sExecutor.execute { sLogger.log(Level.INFO, "\033[36m" + TAG + msg + " \033[0m") }
+        sExecutor.execute { sLogger.log(Level.INFO, "\033[36m" + TAG + msg + " \033[0m" + "\n") }
     }
 
     static void info(String msg) {
-        sExecutor.execute { sLogger.log(Level.INFO, "\033[34m" + TAG + msg + " \033[0m") }
+        sExecutor.execute { sLogger.log(Level.INFO, "\033[34m" + TAG + msg + " \033[0m" + "\n") }
     }
 
     static void warning(String msg) {
-        sExecutor.execute { sLogger.log(Level.INFO, "\033[33m" + TAG + msg + " \033[0m") }
+        sExecutor.execute { sLogger.log(Level.INFO, "\033[33m" + TAG + msg + " \033[0m" + "\n") }
     }
 
     static void error(String msg, Throwable err) {
-        sLogger.log(Level.INFO, "\033[31m" + TAG + msg + " \033[0m", err)
+        sLogger.log(Level.INFO, "\033[31m" + TAG + msg + " \033[0m" + "\n", err)
     }
 
     static void debug(String tag, String msg) {
         sExecutor.execute {
-            sLogger.log(Level.INFO, "\033[36m" + TAG + tag + ": " + msg + " \033[0m")
+            sLogger.log(Level.INFO, "\033[36m" + TAG + tag + ": " + msg + " \033[0m" + "\n")
         }
     }
 
     static void info(String tag, String msg) {
         sExecutor.execute {
-            sLogger.log(Level.INFO, "\033[34m" + TAG + tag + ": " + msg + " \033[0m")
+            sLogger.log(Level.INFO, "\033[34m" + TAG + tag + ": " + msg + " \033[0m" + "\n")
         }
     }
 
     static void warning(String tag, String msg) {
         sExecutor.execute {
-            sLogger.log(Level.INFO, "\033[33m" + TAG + tag + ": " + msg + " \033[0m")
+            sLogger.log(Level.INFO, "\033[33m" + TAG + tag + ": " + msg + " \033[0m" + "\n")
         }
     }
 
     static void warning(String tag, String msg, Throwable err) {
-        sLogger.log(Level.INFO, "\033[33m" + TAG + tag + ": " + msg + " \033[0m", err)
+        sLogger.log(Level.INFO, "\033[33m" + TAG + tag + ": " + msg + " \033[0m" + "\n", err)
     }
 
     static void warning(String msg, Throwable err) {
-        sLogger.log(Level.INFO, "\033[33m" + TAG + msg + " \033[0m", err)
+        sLogger.log(Level.INFO, "\033[33m" + TAG + msg + " \033[0m" + "\n", err)
     }
 
     static void error(String tag, String msg) {
         sExecutor.execute {
-            sLogger.log(Level.INFO, "\033[31m" + TAG + tag + ": " + msg + " \033[0m")
+            sLogger.log(Level.INFO, "\033[31m" + TAG + tag + ": " + msg + " \033[0m" + "\n")
         }
     }
 
     static void error(String tag, String msg, Throwable err) {
 
-        sLogger.log(Level.INFO, "\033[31m" + TAG + tag + ": " + msg + " \033[0m", err)
+        sLogger.log(Level.INFO, "\033[31m" + TAG + tag + ": " + msg + " \033[0m" + "\n", err)
 
     }
 }

@@ -39,6 +39,9 @@ public class MethodExecutionReplaceTransformer extends ReplaceTransformer {
         if (!isMatchSourceMethod(inputClass, false, name, signature, method, true)) {
             return false;
         }
+
+        Logger.info("MethodExecution: " + name + " --- " + signature);
+
         String target = getTarget();
         target = getReplaceStatement(inputClassName, method, target);
         method.setBody(target);

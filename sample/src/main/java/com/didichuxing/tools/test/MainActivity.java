@@ -27,7 +27,9 @@ public class MainActivity extends Activity implements IInterface.Callback<String
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
 
+    private void init() {
         Button button = new Button(this);
 
         //Replace test

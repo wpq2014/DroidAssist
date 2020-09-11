@@ -25,13 +25,13 @@ sourceSets {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
-    testCompile "com.android.tools.build:gradle:$androidGradleVersion"
+    testImplementation 'junit:junit:4.13'
+    testImplementation "com.android.tools.build:gradle:$androidGradleVersion"
 
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile gradleApi()
-    compile localGroovy()
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation gradleApi()
+    implementation localGroovy()
     compileOnly "com.android.tools.build:gradle:$androidGradleVersion"
 
-    compile "org.javassist:javassist:$assistVersion" //'3.24.0-GA'
+    implementation "org.javassist:javassist:$assistVersion" //'3.24.0-GA'
 }
