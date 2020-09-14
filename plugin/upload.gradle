@@ -2,8 +2,11 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 
-def siteUrl = 'https://github.com/didichuxing/DroidAssist' // 项目的主页
-def gitUrl = 'https://github.com/didichuxing/DroidAssist.git' // Git仓库的url
+//def siteUrl = 'https://github.com/didichuxing/DroidAssist' // 项目的主页
+//def gitUrl = 'https://github.com/didichuxing/DroidAssist.git' // Git仓库的url
+
+def siteUrl = 'https://github.com/wpq2014/DroidAssist' // 项目的主页
+def gitUrl = 'https://github.com/wpq2014/DroidAssist.git' // Git仓库的url
 
 group = GROUP_ID
 archivesBaseName = ARTIFACT_ID
