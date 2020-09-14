@@ -36,7 +36,7 @@ dependencies {
 在需要处理的 model project 的 build.gradle 里添加：
 
 ```groovy
-apply plugin: 'com.wpq.didichuxing.tools.droidassist'
+apply plugin: 'com.didichuxing.tools.droidassist'
 droidAssistOptions {
     config file("droidassist.xml"),file("droidassist2.xml") //插件配置文件(必选配置,支持多配置文件)
 }
