@@ -52,8 +52,8 @@ public class MethodCallQueryTransformer extends QueryTransformer {
         String target = getTarget();
         int line = methodCall.getLineNumber();
 
-        Logger.warning(target + insnClassName + "." + insnName
-                + "\n\t\t\t 代码行：" + inputClassName + ".java" + ":" + line);
+        Logger.warning("\n" + target + insnClassName + "." + insnName
+                + "\n代码行：" + inputClassName + ".java" + ":" + line);
 
         return true;
     }
