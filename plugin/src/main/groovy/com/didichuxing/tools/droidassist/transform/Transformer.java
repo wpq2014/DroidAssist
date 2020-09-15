@@ -95,7 +95,7 @@ public abstract class Transformer {
             if (abortOnUndefinedClass) {
                 throw new DroidAssistNotFoundException(msg);
             } else {
-                Logger.warning(msg);
+//                Logger.warning(msg);
             }
         } else {
             return ctClass;
