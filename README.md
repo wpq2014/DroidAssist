@@ -33,6 +33,21 @@ dependencies {
 }
 ```
 
+如果jenter的plugin下载失败，加上下面的配置再试试：
+```groovy
+buildscript {
+    repositories {
+    	maven { url 'https://dl.bintray.com/2014wpq/DroidAssist/' }
+    }
+}
+
+allprojects {
+    repositories {
+    	maven { url 'https://dl.bintray.com/2014wpq/DroidAssist/' }
+    }
+}
+```
+
 在需要处理的 model project 的 build.gradle 里添加：
 
 ```groovy
