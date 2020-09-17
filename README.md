@@ -55,11 +55,19 @@ apply plugin: 'com.didichuxing.tools.droidassist'
 droidAssistOptions {
     config file("droidassist.xml"),file("droidassist2.xml") //插件配置文件(必选配置,支持多配置文件)
 }
+apply plugin: 'com.didichuxing.tools.droidassist'
+droidAssistOptions {
+    enable true // 需要时打开
+    logLevel 3
+    config file("droidassist.xml")
+    logDir file("${project.buildDir.absolutePath}/logs")
+}
 ```
 
 其他配置：
 * `enable` 如果需要停用 DroidAssist 插件功能，可以添加 `enable false` 以停用插件 (可选配置)
 * `logLevel` 日志输出等级：`0` 关闭日志输出，`1` 输出日志到控制台 `2` 输出日志到文件 `3` 输出日志到控制台以及日志 (可选配置)
+* `config` 例如：config file("droidassist.xml"),file("droidassist2.xml") // 插件配置文件(必选配置,支持多配置文件)
 * `logDir` 日志输出目录，当日志输出到文件时，默认的输出目录是当前 `model` 的 `build/outputs/logs` 目录 (可选配置)
 
 ## 示例
