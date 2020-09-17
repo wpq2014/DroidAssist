@@ -33,7 +33,7 @@ dependencies {
 }
 ```
 
-如果jenter的plugin下载失败，加上下面的配置再试试：
+如果jenter的plugin下载失败，就用下面的吧：
 ```groovy
 buildscript {
     repositories {
