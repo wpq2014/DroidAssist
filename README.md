@@ -53,10 +53,6 @@ allprojects {
 ```groovy
 apply plugin: 'com.didichuxing.tools.droidassist'
 droidAssistOptions {
-    config file("droidassist.xml"),file("droidassist2.xml") //插件配置文件(必选配置,支持多配置文件)
-}
-apply plugin: 'com.didichuxing.tools.droidassist'
-droidAssistOptions {
     enable true // 需要时打开
     logLevel 3
     config file("droidassist.xml")
