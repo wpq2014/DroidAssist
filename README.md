@@ -29,7 +29,7 @@ DroidAssist 适用于 `Android Studio` 工程 `application model` 或者 `librar
 
 ```groovy
 dependencies {
-    classpath "com.wpq.didichuxing.tools:droidassist:1.1.2"
+    classpath "com.wpq.didichuxing.tools:droidassist:1.1.6"
 }
 ```
 

@@ -14,7 +14,7 @@ public class MethodCallQueryTransformer extends QueryTransformer {
 
     @Override
     public String getName() {
-        return "MethodCallInsertTransformer";
+        return "MethodCallQueryTransformer";
     }
 
     @Override

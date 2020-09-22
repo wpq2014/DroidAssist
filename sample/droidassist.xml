@@ -18,6 +18,19 @@
             <Source>String android.net.wifi.WifiInfo.getMacAddress()</Source>
             <Target>检测到获取Mac地址：</Target>
         </MethodCall>
+
+        <MethodCall>
+            <Source>String
+                android.provider.Settings$Secure.getString(android.content.ContentResolver,java.lang.String)
+            </Source>
+            <Target>检测到获取AndroidId：</Target>
+        </MethodCall>
+
+        <MethodCall>
+            <Source>java.util.List android.content.pm.PackageManager.getInstalledPackages(int)
+            </Source>
+            <Target>检测到获取软件安装列表：</Target>
+        </MethodCall>
     </Query>
 
 

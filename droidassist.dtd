@@ -1,5 +1,5 @@
 <!DOCTYPE DroidAssist [
-    <!ELEMENT DroidAssist ((Global?|Replace?|Insert?|Around?|Enhance?)?,(Global?|Replace?|Insert?|Around?|Enhance?)?,(Global?|Replace?|Insert?|Around?|Enhance?)?,(Global?|Replace?|Insert?|Around?|Enhance?)?,(Global?|Replace?|Insert?|Around?|Enhance?)?)>
+    <!ELEMENT DroidAssist ((Global?|Query?|Replace?|Insert?|Around?|Enhance?)?,(Global?|Query?|Replace?|Insert?|Around?|Enhance?)?,(Global?|Query?|Replace?|Insert?|Around?|Enhance?)?,(Global?|Query?|Replace?|Insert?|Around?|Enhance?)?,(Global?|Query?|Replace?|Insert?|Around?|Enhance?)?,(Global?|Query?|Replace?|Insert?|Around?|Enhance?)?)>
     <!ELEMENT Filter     (Include*|Exclude*)*>
     <!ELEMENT Include    (#PCDATA)>
     <!ELEMENT Exclude    (#PCDATA)>
@@ -41,6 +41,7 @@
     <!ELEMENT TimingInitializerExecution    (Source,Target,Filter?)>
     <!ELEMENT ReparentClass    (Source,Target,Filter?)>
     <!ELEMENT Global     (Filter?)>
+    <!ELEMENT Query      (MethodCall*)*>
     <!ELEMENT Replace    (MethodCall*|MethodExecution*|ConstructorCall*|ConstructorExecution*|InitializerExecution*|FieldRead*|FieldWrite*)*>
     <!ELEMENT Around     (MethodCall*|MethodExecution*|ConstructorCall*|ConstructorExecution*|InitializerExecution*|FieldRead*|FieldWrite*)*>
     <!ELEMENT Insert     (BeforeMethodCall*|AfterMethodCall*|BeforeMethodExecution*|AfterMethodExecution*|BeforeConstructorCall*|AfterConstructorCall*|BeforeConstructorExecution*|AfterConstructorExecution*|BeforeInitializerExecution*|AfterInitializerExecution*|BeforeFieldRead*|AfterFieldRead*|BeforeFieldWrite*|AfterFieldWrite*)*>
